@@ -36,6 +36,8 @@ document.getElementById('add').addEventListener('click', function() {
     // Clear the input field
     document.getElementById('input').value = '';
 
+    document.getElementById('iAmEmpty').style.display = 'none';
+
     // Add event listener to the newly created checkbox
     checkBox = item.querySelector('.fa-regular');
     checkBox.addEventListener('click', function() {
@@ -55,6 +57,10 @@ document.getElementById('add').addEventListener('click', function() {
     // Add event listener to the newly created delete button
     del.addEventListener('click', function() {
         item.remove();
+
+        if (list.children.length === 1) {
+            document.getElementById('iAmEmpty').style.display = 'block';
+        }
     });
 });
 
@@ -77,9 +83,14 @@ check.forEach(function(item) {
 });
 
 
+
 var deleteBtn = document.querySelectorAll('.del');
 deleteBtn.forEach(function(item) {
     item.addEventListener('click', function() {
         item.parentNode.remove();
+
+        if (list.children.length === 1) {
+            document.getElementById('iAmEmpty').style.display = 'block';
+        }
     });
 });
