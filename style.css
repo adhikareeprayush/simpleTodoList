@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 html,body{
@@ -12,6 +11,8 @@ html,body{
     height: 100%;
     overflow: hidden;
     position: relative;
+    font-family: 'Courier New', Courier, monospace;
+
 }
 
 body{
@@ -33,7 +34,7 @@ body{
 }
 
 .header{
-    font-family: 'Wuwu Perspectiva', sans-serif;
+    font-family: 'Wuwu Perspectiva', sans-serif !important;
     font-size: 3rem;
     color: #fff;
     text-align: center;
