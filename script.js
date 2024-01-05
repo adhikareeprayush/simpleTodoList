@@ -1,5 +1,3 @@
-let add = document.getElementById('add');
-
 document.getElementById('add').addEventListener('click', function() {
     let list = document.getElementById('list');
     let item = document.createElement('li');
@@ -43,17 +41,18 @@ document.getElementById('add').addEventListener('click', function() {
 
     // Add event listener to the newly created checkbox
     checkBox = item.querySelector('.fa-regular');
-    checkBox.addEventListener('click', function() {
+    checkBox.addEventListener('click', function(event) {
+        event.stopPropagation(); // Stop the event from bubbling up
         if (checkBox.classList.contains('fa-square')) {
             checkBox.classList.remove('fa-square');
             checkBox.classList.add('fa-check-square');
-            let span = item.parentElement.querySelector('.text');
-            span.style.textDecoration = 'line-through';
+            let text = item.querySelector('.text');
+            text.style.textDecoration = 'line-through';
         } else {
             checkBox.classList.remove('fa-check-square');
             checkBox.classList.add('fa-square');
-            let span = item.parentElement.querySelector('.text');
-            span.style.textDecoration = 'none';
+            let text = item.querySelector('.text');
+            text.style.textDecoration = 'none';
         }
     });
 
