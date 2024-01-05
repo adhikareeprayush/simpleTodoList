@@ -192,6 +192,10 @@ li .del{
     padding-right: 5px;
 }
 
+#iAmEmpty{
+    display: block;
+}
+
 @media (max-width:560px)
 {
     .header{
