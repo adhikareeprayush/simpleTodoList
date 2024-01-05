@@ -131,7 +131,7 @@ ul{
     align-items: flex-start;
     gap:20px;
     height:auto;
-    width:400px;
+    width:500px;
     padding:20px;
     border:1px solid white;
     border-radius:5px;
@@ -140,14 +140,12 @@ ul{
 li{
     font-size: 20px;
     color:white;
-    position: relative;
     width: 100%;
-}
-
-li .del{
-    position: absolute;
-    right: 0;
-    cursor: pointer;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .footer{
@@ -195,6 +193,27 @@ li .del{
 #iAmEmpty{
     display: block;
 }
+
+li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+li div{
+    width: 300px;
+    height: auto;
+}
+
+.text {
+flex-grow: 1;
+word-break: break-all; /* Allow the text to break if it exceeds the container width */
+}
+
 
 @media (max-width:560px)
 {
@@ -279,14 +298,16 @@ li .del{
     li{
         font-size: 20px;
         color:white;
-        position: relative;
         width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
-    li .del{
-        position: absolute;
-        right: 0;
-        cursor: pointer;
+    li div{
+        width: 200px;
+        height: auto;
     }
 
     .footer{
