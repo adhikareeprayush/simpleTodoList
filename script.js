@@ -12,7 +12,10 @@ document.getElementById('add').addEventListener('click', function() {
     item.appendChild(checkBox);
 
     // Set the content of the list item using innerHTML
-    item.innerHTML += document.getElementById('input').value;
+    let span = document.createElement('div');
+    span.classList.add('text');
+    span.innerHTML = document.getElementById('input').value;
+    item.appendChild(span);
 
     // Check if the input value is empty
     if (item.innerText.trim() === '') {
